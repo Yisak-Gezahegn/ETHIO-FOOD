@@ -1,0 +1,100 @@
+ /* Cookie Banner Container */
+.cookie-bar {
+    position: fixed;
+    bottom: 0; /* Sits at the very bottom */
+    left: 0;
+    width: 100%;
+    background-color: #121212; /* Deep dark background */
+    color: #e0e0e0;
+    padding: 25px 40px;
+    z-index: 10000;
+    box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.4);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center; /* Centers the content box */
+}
+
+.cookie-content {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Text left, Buttons right */
+    gap: 30px;
+}
+
+.cookie-content p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #bbbbbb;
+    max-width: 700px;
+}
+
+.cookie-content a {
+    color: #4525e4;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* Button Group Styling */
+.cookie-buttons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* "Use only necessary" - Plain text style */
+.btn-text {
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/* "Manage" - Darker blue/grey background */
+.btn-outline {
+    background-color: #d1dce3; 
+    color: #00aaff;
+    border: none;
+    padding: 12px 35px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* "Allow" - Bright blue background */
+.btn-primary {
+    background-color: #13b1f5;
+    color: #000000; /* Black text on bright blue */
+    border: none;
+    padding: 12px 45px;
+    border-radius: 6px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #0088cc;
+}
+
+/* Mobile Responsive Fix */
+@media (max-width: 768px) {
+    .cookie-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .cookie-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+}
+.cookie-bar {
+    /* ... existing styles ... */
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    opacity: 1;
+}

@@ -1,0 +1,92 @@
+/* --- ETHIO FOOD MENU PAGE STYLING --- */
+
+:root {
+    --ethio-green: #2d5a27;
+    --ethio-red: #ff4757;
+    --ethio-yellow: #f1c40f;
+    --dark-text: #2f3542;
+    --light-bg: #f1f2f6;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--light-bg);
+    margin: 0;
+    padding: 0;
+    color: var(--dark-text);
+}
+
+.main-content {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+/* Restaurant Header */
+h1 {
+    color: var(--ethio-green);
+    border-bottom: 4px solid var(--ethio-yellow);
+    display: inline-block;
+    padding-bottom: 10px;
+    margin-bottom: 5px;
+}
+
+p {
+    font-size: 1.1rem;
+    color: #747d8c;
+    margin-bottom: 30px;
+}
+
+/* The Grid Layout */
+.restaurants-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+/* Individual Food Cards */
+.data-card {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+    border-top: 5px solid var(--ethio-red); /* Style accent */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.data-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.data-card h4 {
+    margin: 0 0 10px 0;
+    font-size: 1.3rem;
+    color: var(--dark-text);
+}
+
+.data-card p {
+    font-weight: bold;
+    color: var(--ethio-green);
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+/* The Button */
+.btn-save {
+    background-color: var(--ethio-red);
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-save:hover {
+    background-color: #e84118;
+}

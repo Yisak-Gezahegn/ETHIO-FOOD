@@ -1,0 +1,382 @@
+/* --- ETHIO FOOD LEGAL PAGES STYLING --- */
+
+:root {
+            --primary: #e63946;
+            --secondary: #f1faee;
+            --accent: #a8dadc;
+            --dark: #1d3557;
+            --light: #f8f9fa;
+            --success: #2a9d8f;
+            --warning: #e9c46a;
+            --danger: #e63946;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.8;
+    color: var(--text-gray);
+    background-color: var(--bg-light);
+    margin: 0;
+    padding: 0;
+}
+
+/* Container for the legal text */
+.legal-container {
+    max-width: 850px;
+    margin: 60px auto;
+    background: white;
+    padding: 50px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Headings */
+h1 {
+    color: var(--primary-red);
+    font-size: 2.5rem;
+    border-bottom: 3px solid var(--primary-red);
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+h2 {
+    color: var(--dark-blue);
+    font-size: 1.5rem;
+    margin-top: 40px;
+    border-left: 5px solid var(--primary-red);
+    padding-left: 15px;
+}
+
+/* Text Elements */
+p {
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+ul {
+    margin-bottom: 25px;
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+strong {
+    color: var(--dark-blue);
+}
+
+/* Action Buttons */
+.btn-back {
+    display: inline-block;
+    margin-top: 40px;
+    padding: 12px 30px;
+    background-color: var(--dark-blue);
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-back:hover {
+    background-color: var(--primary-red);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(230, 57, 70, 0.3);
+}
+
+/* Footer style for legal pages */
+.last-updated {
+    font-style: italic;
+    color: #888;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+    display: block;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .legal-container {
+        margin: 20px;
+        padding: 25px;
+    }
+    
+    h1 { font-size: 1.8rem; }
+}
+
+ 
+
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--light);
+            color: #333;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            text-align: center;
+            width: 100%;
+        }
+
+        .btn:hover {
+            background-color: var(--dark);
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background-color: var(--accent);
+            color: var(--dark);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--dark);
+            color: white;
+        }
+
+        .btn-google {
+            background-color: white;
+            color: #333;
+            border: 1px solid #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        header {
+            background-color: white;
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .logo i {
+            font-size: 1.8rem;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        nav a:hover {
+            color: var(--primary);
+        }
+
+        .auth-buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .mobile-menu {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        .form-footer {
+            text-align: center;
+            margin-top: 25px;
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .form-footer a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .form-footer a:hover {
+            text-decoration: underline;
+        }
+
+        
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 40px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h3 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-col h3::after {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50px;
+            height: 2px;
+            background-color: var(--primary);
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col a {
+            color: #ddd;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-col a:hover {
+            color: var(--primary);
+            padding-left: 5px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            background-color: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+            color: #aaa;
+        }
+
+        
+        @media (max-width: 992px) {
+            .auth-container {
+                flex-direction: column;
+                max-width: 500px;
+            }
+            
+            .auth-welcome {
+                padding: 30px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-container {
+                flex-wrap: wrap;
+            }
+
+            nav {
+                width: 100%;
+                margin-top: 15px;
+                display: none;
+            }
+
+            nav.active {
+                display: block;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .mobile-menu {
+                display: block;
+            }
+            
+            .auth-forms {
+                padding: 30px;
+            }
+            
+            .social-login {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .auth-welcome, .auth-forms {
+                padding: 20px;
+            }
+            
+            .auth-welcome h1 {
+                font-size: 2rem;
+            }
+        }

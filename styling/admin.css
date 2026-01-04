@@ -1,0 +1,143 @@
+:root {
+    --primary: #ff4757;
+    --sidebar-dark: #2c3e50;
+    --bg-light: #f8f9fa;
+    --white: #ffffff;
+    --text-muted: #8391a2;
+    --shadow: 0 4px 20px 0 rgba(0,0,0,.05);
+}
+
+body {
+    background-color: var(--bg-light);
+    margin: 0;
+    display: flex;
+}
+
+/* Sidebar Layout */
+.admin-sidebar {
+    width: 250px;
+    height: 100vh;
+    background: var(--sidebar-dark);
+    color: white;
+    position: fixed;
+    padding: 20px;
+}
+
+.admin-sidebar h3 {
+    color: var(--primary);
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.nav-links {
+    margin-top: 30px;
+    list-style: none;
+    padding: 0;
+}
+
+.nav-links li {
+    margin-bottom: 15px;
+}
+
+.nav-links a {
+    color: #bdc3c7;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    background: var(--primary);
+    color: white;
+}
+
+.nav-links i { margin-right: 15px; }
+
+/* Main Workspace */
+.admin-main {
+    margin-left: 250px;
+    width: calc(100% - 250px);
+    padding: 40px;
+}
+
+/* Stats Cards */
+.stats-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.stat-card {
+    background: var(--white);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.stat-val {
+    font-size: 24px;
+    font-weight: bold;
+    display: block;
+    margin-top: 5px;
+}
+
+/* Beautiful Table */
+.data-card {
+    background: var(--white);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+}
+
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.admin-table th {
+    text-align: left;
+    color: var(--text-muted);
+    border-bottom: 2px solid #f1f1f1;
+    padding: 12px;
+}
+
+.admin-table td {
+    padding: 15px 12px;
+    border-bottom: 1px solid #f8f9fa;
+}
+
+.status-badge {
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+.status-delivered { background: #e3fcef; color: #00875a; }
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; 
+    z-index: 9999; /* Make sure it is on TOP of everything */
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    background-color: rgba(0,0,0,0.6); /* Darker background */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 400px;
+    border-radius: 10px;
+}
