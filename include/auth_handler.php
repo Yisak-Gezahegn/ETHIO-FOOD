@@ -27,41 +27,45 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
         $stmt->close();
     }
-    
     // --- 2. LOGIN LOGIC ---
-    if (isset($_POST['login_btn'])) {
-        $email = trim($_POST['email']);
-        $pass  = $_POST['password'];
+    // --- 2. LOGIN LOGIC (Corrected) ---
+if (isset($_POST['login_btn'])) {
+    $email = trim($_POST['email']);
+    $pass  = $_POST['password'];
 
-        $stmt = $conn->prepare("SELECT id, fullname, password, user_role FROM users WHERE email = ?");
-        $stmt->bind_param("s", $email);
-        $stmt->execute();
-        $result = $stmt->get_result();
+    $stmt = $conn->prepare("SELECT id, fullname, password, user_role FROM users WHERE email = ?");
+    $stmt->bind_param("s", $email);
+    $stmt->execute();
+    $result = $stmt->get_result();
 
-        if ($user = $result->fetch_assoc()) {
-            if (password_verify($pass, $user['password'])) {
-                $_SESSION['user_id'] = $user['id'];
-                $_SESSION['full_name'] = $user['fullname'];
-                $_SESSION['role'] = $user['user_role'];
+    if ($user = $result->fetch_assoc()) {
+        if (password_verify($pass, $user['password'])) {
+            // Store sessions using consistent keys
+            $_SESSION['user_id'] = $user['id'];
+            $_SESSION['full_name'] = $user['fullname'];
+            $_SESSION['role'] = $user['user_role'];
 
-                if ($user['user_role'] == 'developer') {
-                    header("Location: ../admin_dashboard.php"); 
-                } elseif ($user['user_role'] == 'owner') {
-                    header("Location: ../owner/owner_dashboard.php"); 
-                } else {
-                    header("Location: ../index.php");
-                }
+            // Check the correct key: 'user_role'
+            if ($user['user_role'] == 'developer') {
+                header("Location: ../admin_dashboard.php"); 
+                exit();
+            } elseif ($user['user_role'] == 'owner') { // FIXED: changed 'role' to 'user_role'
+                header("Location: ../owner/dashboard_menu.php"); 
                 exit();
             } else {
-                header("Location: ../otherpart/login.php?error=wrongpass");
+                header("Location: ../index.php");
                 exit();
             }
         } else {
-            header("Location: ../otherpart/login.php?error=nouser");
+            header("Location: ../otherpart/login.php?error=wrongpass");
             exit();
         }
-        $stmt->close();
+    } else {
+        header("Location: ../otherpart/login.php?error=nouser");
+        exit();
     }
+    $stmt->close();
+}
 
     // --- 3. UPDATE PROFILE LOGIC (Fixing the Location Edit) ---
     if (isset($_POST['update_profile']) && isset($_SESSION['user_id'])) {
