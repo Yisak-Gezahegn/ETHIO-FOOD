@@ -27,6 +27,7 @@ const salesChart = new Chart(ctx, {
     }
 });
 
+
 function openResModal(id, name, location, rating) {
     console.log("Editing Restaurant ID: " + id);
     

@@ -28,10 +28,10 @@
             <div class="auth-buttons">
                 <?php if (isset($_SESSION['full_name'])): ?>
                     <a href="./customer/customer.php" class="btn"><i class="fas fa-user"></i> <?php echo $_SESSION['full_name']; ?></a>
-                    <a href="./otherpart/logout.php" class="btn">Logout</a>
+                    <a href="./logout.php" class="btn">Logout</a>
                 <?php else: ?>
-                    <a href="./otherpart/login.php" style="width: 100px; padding: 12px 0;" class="btn btn-secondary">Login</a>
-                    <a href="./otherpart/login.php" style="width: 100px; padding: 12px 0;" class="btn btn-secondary">Sign Up</a>
+                    <a href="./login.php" style="width: 100px; padding: 12px 0;" class="btn btn-secondary">Login</a>
+                    <a href="./login.php" style="width: 100px; padding: 12px 0;" class="btn btn-secondary">Sign Up</a>
                 <?php endif; ?>
             </div>
         </div>
@@ -118,16 +118,18 @@
                 <div class="footer-col">
                     <h3>Categories</h3>
                     <ul>
-                        <li><a href="#">Injera & Wat</a></li>
-                        <li><a href="#">Vegetarian</a></li>
-                        <li><a href="#">Meat Dishes</a></li>
+                        <li>&#127835 Injera & Wat</li>
+                        <li>&#129367 Vegetarian</li>
+                        <li>&#127831 Meat Dishes</li>
+                        <li>&#127828 Humburger</li>
+                        <li>&#127829 Pizza</li>
                     </ul>
                 </div>
                 
                 <div class="footer-col">
                     <h3>Contact Us</h3>
                     <ul>
-                        <li>📍 Addis Ababa, Ethiopia</li>
+                        <li>📍 Haramaya, Ethiopia</li>
                         <li>☎ +251 973 391 342</li>
                         <li>✉ info@ethiofood.com</li>
                     </ul>

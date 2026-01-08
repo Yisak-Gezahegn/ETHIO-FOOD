@@ -2,6 +2,7 @@
 session_start();
 require_once '../db.php';
 
+
 $restaurant_id = 4; // Rehoboth Restaurant
 
 // Fetch restaurant details
@@ -13,7 +14,7 @@ $restaurant = $stmt->fetch();
 $stmt = $pdo->prepare("SELECT * FROM menu_items WHERE restaurant_id = ? ORDER BY category, name");
 $stmt->execute([$restaurant_id]);
 $menu_items = $stmt->fetchAll();
-
+$cart_count = isset($_SESSION['cart']) ? count($_SESSION['cart']) : 0;
 // Group by category
 $categories = [];
 foreach ($menu_items as $item) {
@@ -486,6 +487,7 @@ if (isset($_SESSION['cart'])) {
             alert('Proceeding to checkout! Total: $<?php echo number_format($cart_total, 2); ?>');
             // In real app: window.location.href = 'checkout.php';
         });
+        
     </script>
 </body>
 </html>

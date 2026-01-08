@@ -210,7 +210,7 @@ if (session_status() === PHP_SESSION_NONE) {
                 <div class="footer-col">
                     <h3>Contact Us</h3>
                     <ul>
-                        <li>📍 Addis Ababa, Ethiopia</li>
+                        <li>📍 Haramaya, Ethiopia</li>
                         <li>☎ +25 973 391 342</li>
                         <li>✉ ethiofood@gmail.com</li>
                     </ul>

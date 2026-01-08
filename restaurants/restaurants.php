@@ -336,7 +336,7 @@ try {
                 </div>
                 <div class="footer-section">
                     <h3>Contact Us</h3>
-                    <p><i class="fas fa-map-marker-alt"></i> Addis Ababa, Ethiopia</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Haramaya, Ethiopia</p>
                     <p><i class="fas fa-phone"></i> +251 911 234 567</p>
                     <p><i class="fas fa-envelope"></i> order@tasteofethiopia.com</p>
                     <p><i class="fas fa-clock"></i> Open daily 10 AM - 10 PM</p>
